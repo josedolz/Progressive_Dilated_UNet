@@ -297,7 +297,7 @@ def saveImages(net, img_batch, batch_size, epoch, modelName, deepSupervision=0):
                                      range=None,
                                      scale_each=False,
                                      pad_value=0)
-    pdb.set_trace()
+
     printProgressBar(total, total, done="Images saved !")
         
 
