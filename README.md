@@ -14,7 +14,7 @@
 To start with your own architecture, you have to modify the file "main.py" according to your requirements.
 
 - Line 86. Define the path to your images (i.e.->root_dir). Images should be saved as .png, and the structures should be:
- - Training images: ../path/train-->Img
+ - &nbsp Training images: ../path/train-->Img
  - Training GT: ../path/train-->GT
  - Validation images: ../path/val-->Img
  - Validation GT: ../path/val-->GT
