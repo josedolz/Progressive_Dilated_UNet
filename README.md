@@ -1,20 +1,23 @@
-# LiviaNET. 3D fully Convolutional Neural Network for semantic image segmentation
+# UNet Progressive dilated convolutions: application to bladder multi-region segmentation (2D)
 
-This repository contains the code of LiviaNET, a 3D fully convolutional neural network that was employed in our work: [3D fully convolutional networks for subcortical segmentation in MRI: A large-scale study](http://www.sciencedirect.com/science/article/pii/S1053811917303324) Accepted in Neuroimage, April,17th 2017.
 
 ## Requirements
 
-- The code has been written in Python (2.7) and requires [Theano](http://deeplearning.net/software/theano/)
-- You should also have installed [scipy](https://www.scipy.org/)
-- (Optional) The code allows to load images in Matlab and Nifti formats. If you wish to use nifti formats you should install [nibabel](http://nipy.org/nibabel/) 
-
+- The code has been written in Python (3.5.2) and requires [PyTorch](https://pytorch.org) (Version 0.4.0)
+- You should also have installed different modules, such as numpy, torchvision, or some others (if executing the code complains, just install the missing module)
 ## Running the code
 
 ## Training
 
 ### How do I train my own architecture from scratch?
 
-To start with your own architecture, you have to modify the file "LiviaNET_Config.ini" according to your requirements.
+To start with your own architecture, you have to modify the file "main.py" according to your requirements.
+
+- Line 86. Define the path to your images. Images should be saved as .png, and the structures should be:
+-- Training images: ../path/train-->Img
+-- Training GT: ../path/train-->GT
+-- Validation images: ../path/val-->Img
+-- Validation GT: ../path/val-->GT
 
 Then you simply have to write in the command line:
 
