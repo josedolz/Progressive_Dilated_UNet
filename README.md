@@ -13,12 +13,12 @@
 
 To start with your own architecture, you have to modify the file "main.py" according to your requirements.
 
-- Line 86. Define the path to your images. Images should be saved as .png, and the structures should be:
--- Training images: ../path/train-->Img
--- Training GT: ../path/train-->GT
--- Validation images: ../path/val-->Img
--- Validation GT: ../path/val-->GT
-
+- Line 86. Define the path to your images (i.e.->root_dir). Images should be saved as .png, and the structures should be:
+ - Training images: ../path/train-->Img
+ - Training GT: ../path/train-->GT
+ - Validation images: ../path/val-->Img
+ - Validation GT: ../path/val-->GT
+- Line 87. Change your model name. This is the name to save the trained model, as well as all its statistics during training/validation.
 Then you simply have to write in the command line:
 
 ```

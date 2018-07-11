@@ -131,7 +131,7 @@ def runTraining():
     print("~~~~~~~~~~~ Creating the model ~~~~~~~~~~")
     num_classes = 4
     
-    initial_kernels = 4
+    initial_kernels = 32
     
     # Load network
     netG = UNetG_Dilated_Progressive(1, initial_kernels, num_classes)
@@ -343,10 +343,6 @@ def runTraining():
 
         currentDice = (d1+d2+d3)/3 
 
-        if not os.path.exists(model_dir):
-            os.makedirs(model_dir)
-            
-        torch.save(netG, os.path.join(model_dir, "Best_" + modelName + ".pkl"))
         # How many slices with/without tumor correctly classified
         print("[val] DSC: (1): {:.4f} (2): {:.4f}  (3): {:.4f} ".format(d1,d2,d3))
         
