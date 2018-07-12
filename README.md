@@ -45,5 +45,5 @@ Where X indicates the GPU where to run the inference.
 
 Images as .png, as well as .mat files are saved. Remember these images are in 2D, so they will have to be reconstructed back.
 
-*Note:When converting the images from 3D to 2D, what I do is to save each 2D image as: volumeName_slice.png (e.g., subject101_001.png). In this way we will be able to know to which slice it corresponds and construct the volume back.
+-Note:When converting the images from 3D to 2D, what I do is to save each 2D image as: volumeName_slice.png (e.g., subject101_001.png). In this way we will be able to know to which slice it corresponds and construct the volume back.
 
