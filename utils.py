@@ -671,21 +671,3 @@ def adjust_learning_rate(lr_args, optimizer, epoch):
     print(" --- Learning rate:  {}".format(lr))
 
 
-if __name__ == '__main__':
-    from PIL import Image
-    from torchvision import transforms
-
-    loader = transforms.Compose([transforms.ToTensor()])
-    pred = to_var(getOneHotSegmentation(loader(Image.open('MICCAI_Bladder/val/GT/newR12_Lab_65.png')).unsqueeze(0)))
-    GT = to_var(getOneHotSegmentation(loader(Image.open('MICCAI_Bladder/val/GT/newR12_Lab_93.png')).unsqueeze(0)))
-    print(pred)
-
-    hausdorff = Hausdorff().cuda()
-
-    from time import time
-
-    tic = time()
-    for _ in range(50):
-        x = hausdorff(pred, GT)
-    toc = time()
-    print(x, (toc - tic) / 50)
